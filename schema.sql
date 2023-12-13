@@ -86,7 +86,7 @@ CREATE TABLE LaborMesswerte
     Hausnummer      INTEGER,
     PLZ             INTEGER,
     erhaltenVon     INTEGER REFERENCES Hausarzt,
-    gehoertZu       INTEGER REFERENCES Patient,
+    gehoertZu       INTEGER REFERENCES Patient
 );
 
 CREATE TABLE eRezept
@@ -119,8 +119,6 @@ CREATE TABLE Ueberweisung
     ueberwiesenVon      INTEGER REFERENCES Hausarzt,
     erhaltenVon         INTEGER REFERENCES Patient
 );
-
-
 
 CREATE TABLE informierenFA
 (
