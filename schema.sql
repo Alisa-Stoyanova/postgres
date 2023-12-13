@@ -1,18 +1,17 @@
-/*
-DROP TABLE Patient;
-DROP TABLE Hausarzt;
-DROP TABLE Facharzt;
-DROP TABLE Probe;
-DROP TABLE DigitalePatientenakte;
-DROP TABLE LaborMesswerte;
-DROP TABLE eRezept;
-DROP TABLE Termin;
-DROP TABLE Ueberweisung;
-DROP TABLE Apotheke;
-DROP TABLE informierenFA;
-DROP TABLE habenDPA;
-DROP TABLE erzeugenLM;
-*/
+DROP TABLE Patient CASCADE CONSTRAINTS ;
+DROP TABLE Hausarzt CASCADE CONSTRAINTS;
+DROP TABLE Facharzt CASCADE CONSTRAINTS;
+DROP TABLE Probe CASCADE CONSTRAINTS;
+DROP TABLE DigitalePatientenakte CASCADE CONSTRAINTS;
+DROP TABLE LaborMesswerte CASCADE CONSTRAINTS;
+DROP TABLE eRezept CASCADE CONSTRAINTS;
+DROP TABLE Termin CASCADE CONSTRAINTS;
+DROP TABLE Ueberweisung CASCADE CONSTRAINTS;
+DROP TABLE Apotheke CASCADE CONSTRAINTS;
+DROP TABLE informierenFA CASCADE CONSTRAINTS;
+DROP TABLE habenDPA CASCADE CONSTRAINTS;
+DROP TABLE erzeugenLM CASCADE CONSTRAINTS;
+
 
 CREATE TABLE Hausarzt
 (
@@ -86,7 +85,7 @@ CREATE TABLE LaborMesswerte
     Hausnummer      INTEGER,
     PLZ             INTEGER,
     erhaltenVon     INTEGER REFERENCES Hausarzt,
-    gehoertZu       INTEGER REFERENCES Patient,
+    gehoertZu       INTEGER REFERENCES Patient
 );
 
 CREATE TABLE eRezept
@@ -119,8 +118,6 @@ CREATE TABLE Ueberweisung
     ueberwiesenVon      INTEGER REFERENCES Hausarzt,
     erhaltenVon         INTEGER REFERENCES Patient
 );
-
-
 
 CREATE TABLE informierenFA
 (
