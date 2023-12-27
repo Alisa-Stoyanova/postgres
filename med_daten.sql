@@ -89,35 +89,35 @@ VALUES (23423, 'Dr. Niklas Vogel', 'Reeperbahn', 8, 22393, 'Praxis Vogel', 'Opht
 
 -- Patient mit neuen Daten befüllen
 
-INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon)
-VALUES (100001, 'Frodo Baggins', '05-02-1997', 'Am Sandtorkai', 5, 22049, 32768);
+INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon, geschlecht)
+VALUES (100001, 'Frodo Baggins', '05-02-1997', 'Am Sandtorkai', 5, 22049, 32768, 'm');
 
-INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon)
-VALUES (100010, 'Bilbo Baggins', '23-09-1939', 'Am Sandtorkai', 5, 22049, 65536);
+INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon, geschlecht)
+VALUES (100010, 'Bilbo Baggins', '23-09-1939', 'Am Sandtorkai', 5, 22049, 65536, 'm');
 
-INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon)
-VALUES (128128, 'Sherlock Holmes', '12-12-1927', 'Neuer Wall', 23, 22529, 45634);
+INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon, geschlecht)
+VALUES (128128, 'Sherlock Holmes', '12-12-1927', 'Neuer Wall', 23, 22529, 45634, 'm');
 
-INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon)
-VALUES (256256, 'Hermione Granger', '17-02-1996', 'Burgstraße', 56, 22769, 76446);
+INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon, geschlecht)
+VALUES (256256, 'Hermione Granger', '17-02-1996', 'Burgstraße', 56, 22769, 76446, 'f');
 
-INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon)
-VALUES (512512, 'James Bond', '01-07-1964', 'Alter Teichweg', 176, 22587, 54577);
+INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon, geschlecht)
+VALUES (512512, 'James Bond', '01-07-1964', 'Alter Teichweg', 176, 22587, 54577, 'm');
 
-INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon)
-VALUES (102400, 'Lisa Simpson', '04-03-2001', 'Rodigalee', 10, 22525, 98346);
+INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon, geschlecht)
+VALUES (102400, 'Lisa Simpson', '04-03-2001', 'Rodigalee', 10, 22525, 98346, 'f');
 
-INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon)
-VALUES (204800, 'Willy Wonka', '08-11-1978', 'Auf den Blöcken', 98, 20249, 23564);
+INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon, geschlecht)
+VALUES (204800, 'Willy Wonka', '08-11-1978', 'Auf den Blöcken', 98, 20249, 23564, 'm');
 
-INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon)
-VALUES (409600, 'Albus Dumbledore', '05-10-1967', 'Sievekingdamm', 248, 22111, 54567);
+INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon, geschlecht)
+VALUES (409600, 'Albus Dumbledore', '05-10-1967', 'Sievekingdamm', 248, 22111, 54567, 'm');
 
-INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon)
-VALUES (819200, 'Hermes Conrad', '06-02-2002', 'Hamburger Straße', 34, 21077, 34546);
+INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon, geschlecht)
+VALUES (819200, 'Hermes Conrad', '06-02-2002', 'Hamburger Straße', 34, 21077, 34546, 'm');
 
-INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon)
-VALUES (163840, 'Ron Weasley', '11-09-2003', 'Horner Weg', 15, 21077, 56672);
+INSERT INTO Patient (KVNummer, Name, Geburtsdatum, Strasse, Hausnummer, PLZ, betreutVon, geschlecht)
+VALUES (163840, 'Ron Weasley', '11-09-2003', 'Horner Weg', 15, 21077, 56672, 'm');
 
 -- Apotheke mit neuen Daten befüllen
 
@@ -281,45 +281,45 @@ VALUES (4791, '11.02.2023', 56672, 163840);
 
 -- Überweisung mit neuen Daten befüllen
 
-INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
-                          ueberwiesenVon, erhaltenVon)
-VALUES (97882, 'Herzprobleme', 'Dr. Emily Braun', 'Fuhlsbüttler Straße', 43, 22041, 32768, 100001);
+INSERT INTO Ueberweisung (Grund, FArztnummer, ueberwiesenVon, erhaltenVon)
+VALUES ('Herzprobleme', 34524, 32768, 100001);
 
-INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
+--Soll korrigiert werden
+/*INSERT INTO Ueberweisung (Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
                           ueberwiesenVon, erhaltenVon)
-VALUES (34235, 'Muttermalüberwachung', 'Dr. Jonas Hartmann', 'Neuer Wall', 77, 20095, 65536, 100010);
+VALUES ('Muttermalüberwachung', 'Dr. Jonas Hartmann', 'Neuer Wall', 77, 20095, 65536, 100010);
 
-INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
+INSERT INTO Ueberweisung (Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
                           ueberwiesenVon, erhaltenVon)
-VALUES (12457, 'Entwicklungsproblem', 'Dr. Marie Neumann', 'Neuer Wall', 95, 22111, 45634, 128128);
+VALUES ('Entwicklungsproblem', 'Dr. Marie Neumann', 'Neuer Wall', 95, 22111, 45634, 128128);
 
-INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
+INSERT INTO Ueberweisung (Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
                           ueberwiesenVon, erhaltenVon)
-VALUES (54342, 'Gelenkschmerzen', 'Dr. Lukas Schmid', 'Neuer Wall', 20, 22083, 76446, 256256);
+VALUES ('Gelenkschmerzen', 'Dr. Lukas Schmid', 'Neuer Wall', 20, 22083, 76446, 256256);
 
-INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
+INSERT INTO Ueberweisung (Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
                           ueberwiesenVon, erhaltenVon)
-VALUES (32467, 'Verdauungsprobleme', 'Dr. Sophia Lang', 'Fuhlsbüttler Straße', 1, 22415, 54577, 512512);
+VALUES ('Verdauungsprobleme', 'Dr. Sophia Lang', 'Fuhlsbüttler Straße', 1, 22415, 54577, 512512);
 
-INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
+INSERT INTO Ueberweisung (Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
                           ueberwiesenVon, erhaltenVon)
-VALUES (34759, 'Kopfschmerzen', 'Dr. Felix Zimmermann', 'Osdorfer Landstraße', 25, 22179, 98346, 102400);
+VALUES ('Kopfschmerzen', 'Dr. Felix Zimmermann', 'Osdorfer Landstraße', 25, 22179, 98346, 102400);
 
-INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
+INSERT INTO Ueberweisung (Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
                           ueberwiesenVon, erhaltenVon)
-VALUES (34237, 'Harnwegsinfektion', 'Dr. Emma Krüger', 'Billstedter Hauptstraße', 38, 22549, 23564, 204800);
+VALUES ('Harnwegsinfektion', 'Dr. Emma Krüger', 'Billstedter Hauptstraße', 38, 22549, 23564, 204800);
 
-INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
+INSERT INTO Ueberweisung (Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
                           ueberwiesenVon, erhaltenVon)
-VALUES (78799, 'Hormonstörung', 'Dr. Leon Schneider', 'Große Elbstraße', 89, 22309, 54567, 409600);
+VALUES ('Hormonstörung', 'Dr. Leon Schneider', 'Große Elbstraße', 89, 22309, 54567, 409600);
 
-INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
+INSERT INTO Ueberweisung (Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
                           ueberwiesenVon, erhaltenVon)
-VALUES (65734, 'Anämie', 'Dr. Charlotte Fischer', 'Schwanenwik', 77, 22549, 34546, 819200);
+VALUES ('Anämie', 'Dr. Charlotte Fischer', 'Schwanenwik', 77, 22549, 34546, 819200);
 
-INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
+INSERT INTO Ueberweisung (Grund, Facharztname, Facharztstrasse, Facharzthausnummer, FacharztPLZ,
                           ueberwiesenVon, erhaltenVon)
-VALUES (23685, 'Sehstörung', 'Dr. Niklas Vogel', 'Reeperbahn', 8, 22393, 56672, 163840);
+VALUES ('Sehstörung', 'Dr. Niklas Vogel', 'Reeperbahn', 8, 22393, 56672, 163840);*/
 
 -- informierenFA (FA = Facharzt) mit neuen Daten befüllen
 
