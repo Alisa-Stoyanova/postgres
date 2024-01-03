@@ -2,7 +2,7 @@
 Praktikum zur Lehrveranstaltung Datenbanken WS 23/24
 Praktikum Nr.5
 Gruppe 3
-Schemaskript
+Facharzt Rolle
 Alisa Stoyanova
 Rahim Akkoyun
 */
@@ -47,10 +47,11 @@ WHERE eingetragenVonFacharzt = USER;
 
 --Trigger erstellen (nur für die Tabellen, die von Facharzt bearbeitet werden)
 
-CREATE TRIGGER InformierenHausarzt
+CREATE OR REPLACE TRIGGER InformierenHausarzt
 AFTER INSERT ON DB_WUY315.Untersuchung
 FOR EACH ROW
 BEGIN
     INSERT INTO DB_WUY315 informierenFacharzt(Datum, Arztnummer, Facharztnummer)
     VALUES (CURRENT_DATE,NEW.untersuchtVonHausarzt, USER);
+    REVOKE SELECT, INSERT, UPDATE ON DB_WUY315.Digitale_Patientenakte FROM Facharzt;
 END;

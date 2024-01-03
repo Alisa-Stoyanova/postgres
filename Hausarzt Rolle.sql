@@ -2,7 +2,7 @@
 Praktikum zur Lehrveranstaltung Datenbanken WS 23/24
 Praktikum Nr.5
 Gruppe 3
-Schemaskript
+Hausarzt Rolle
 Alisa Stoyanova
 Rahim Akkoyun
 */
@@ -14,7 +14,7 @@ CREATE ROLE Hausarzt;
 -- Rechte vergeben
 
 GRANT SELECT, INSERT, UPDATE ON DB_WUY315.Patient                   TO Hausarzt;
-GRANT SELECT, INSERT, UPDATE ON DB_WUY315.Digitale_Patientenakte    TO Hausarzt;
+GRANT SELECT, INSERT, UPDATE ON DB_WUY315.Digitale_Patientenakte    TO Hausarzt WITH GRANT OPTION;
 GRANT SELECT, INSERT, UPDATE ON DB_WUY315.Termin                    TO Hausarzt;
 GRANT SELECT, INSERT, UPDATE ON DB_WUY315.Ueberweisung              TO Hausarzt;
 GRANT SELECT, INSERT, UPDATE ON DB_WUY315.Probe                     TO Hausarzt;
