@@ -2,7 +2,7 @@
 Praktikum zur Lehrveranstaltung Datenbanken WS 23/24
 Praktikum Nr.5
 Gruppe 3
-Schemaskript
+Apotheke Rolle
 Alisa Stoyanova
 Rahim Akkoyun
 */

@@ -154,35 +154,35 @@ VALUES (23478, 'Wellness Pharma', 'Große Elbstraße', 13, 22415, 'Cetirizin', '
 
 -- Probe mit neuen Daten befüllen
 
-INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon)
-VALUES (5504, 'Stuhlprobe', 32768, NULL, 100001);
+INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon, gesendetAnLabor)
+VALUES (5504, 'Stuhlprobe', 32768, NULL, 100001, 64359);
 
-INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon)
-VALUES (5253, 'Abstrich', 65536, NULL, 100010);
+INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon, gesendetAnLabor)
+VALUES (5253, 'Abstrich', 65536, NULL, 100010, 11249);
 
-INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon)
-VALUES (5389, 'Blutprobe', 45634, NULL, 128128);
+INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon, gesendetAnLabor)
+VALUES (5389, 'Blutprobe', 45634, NULL, 128128, 97862);
 
-INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon)
-VALUES (5112, 'Liquorprobe', 76446, NULL, 256256);
+INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon, gesendetAnLabor)
+VALUES (5112, 'Liquorprobe', 76446, NULL, 256256, 87784);
 
-INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon)
-VALUES (5900, 'Liquorprobe', 54577, NULL, 512512);
+INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon, gesendetAnLabor)
+VALUES (5900, 'Liquorprobe', 54577, NULL, 512512, 43765);
 
-INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon)
-VALUES (5331, 'Stuhlprobe', 98346, NULL, 102400);
+INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon, gesendetAnLabor)
+VALUES (5331, 'Stuhlprobe', 98346, NULL, 102400, 55797);
 
-INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon)
-VALUES (5707, 'Urinprobe', 23564, NULL, 204800);
+INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon, gesendetAnLabor)
+VALUES (5707, 'Urinprobe', 23564, NULL, 204800, 22547);
 
-INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon)
-VALUES (5978, 'Liquorprobe', 54567, NULL, 409600);
+INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon, gesendetAnLabor)
+VALUES (5978, 'Liquorprobe', 54567, NULL, 409600, 87653);
 
-INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon)
-VALUES (5845, 'Gewebebiopsie', 34546, NULL, 819200);
+INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon, gesendetAnLabor)
+VALUES (5845, 'Gewebebiopsie', 34546, NULL, 819200, 34854);
 
-INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon)
-VALUES (5829, 'Liquorprobe', 56672, NULL, 163840);
+INSERT INTO Probe (Probenummer, Probetyp, entnommenVonHausarzt, entnommenVonFacharzt, gegebenVon, gesendetAnLabor)
+VALUES (5829, 'Liquorprobe', 56672, NULL, 163840, 34874);
 
 -- Digitale Patientenakte mit neuen Daten befüllen
 
