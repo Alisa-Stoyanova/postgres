@@ -23,69 +23,70 @@ DELETE FROM Ueberweisung;
 DELETE FROM Untersuchung;
 DELETE FROM Medikament;
 DELETE FROM informierenFacharzt;
+DELETE FROM TerminFacharzt;
 
 -- Hausarzt mit neuen Daten befüllen
 
-INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname)
+INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ)
 VALUES (32768, 'John H. Watson', 'Mönckebergstraße', 38, 22041);
 
-INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname)
+INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ)
 VALUES (65536, 'Hippokrates von Kos', 'Saselbeker Stieg', 89, 22415);
 
-INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname)
+INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ)
 VALUES (45634, 'Peter Fischer', 'Wandsbeker Chaussee', 70, 22179);
 
-INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname)
+INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ)
 VALUES (76446, 'Julia Weber', 'Langenhorner Chaussee', 30, 20095);
 
-INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname)
+INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ)
 VALUES (54577, 'Max Meyer', 'Eppendorfer Landstraße', 25, 22179);
 
-INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname)
+INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ)
 VALUES (98346, 'Lisa Wagner', 'Steilshooper Allee', 93, 22111);
 
-INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname)
+INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ)
 VALUES (23564, 'David Becker', 'Billstedter Hauptstraße', 23, 22307);
 
-INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname)
+INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ)
 VALUES (54567, 'Sarah Hoffmann', 'Osdorfer Landstraße', 77, 22415);
 
-INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname)
+INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ)
 VALUES (34546, 'Paul Schäfer', 'Fuhlsbüttler Straße', 1, 22549);
 
-INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname)
+INSERT INTO Hausarzt (Arztnummer, Name, Strasse, Hausnummer, PLZ)
 VALUES (56672, 'Laura Koch', 'Bramfelder Chaussee', 64, 22179);
 
 -- Facharzt mit neuen Daten befüllen
 
-INSERT INTO Facharzt (FArztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname, Fachrichtung)
+INSERT INTO Facharzt (Facharztnummer, Name, Strasse, Hausnummer, PLZ, Fachrichtung)
 VALUES (34524, 'Dr. Emily Braun', 'Fuhlsbüttler Straße', 43, 22041, 'Kardiologie');
 
-INSERT INTO Facharzt (FArztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname, Fachrichtung)
+INSERT INTO Facharzt (Facharztnummer, Name, Strasse, Hausnummer, PLZ, Fachrichtung)
 VALUES (67865, 'Dr. Jonas Hartmann', 'Neuer Wall', 77, 20095,'Dermatologie');
 
-INSERT INTO Facharzt (FArztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname, Fachrichtung)
+INSERT INTO Facharzt (Facharztnummer, Name, Strasse, Hausnummer, PLZ, Fachrichtung)
 VALUES (45467, 'Dr. Marie Neumann', 'Neuer Wall', 95, 22111,'Pädiatrie');
 
-INSERT INTO Facharzt (FArztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname, Fachrichtung)
+INSERT INTO Facharzt (Facharztnummer, Name, Strasse, Hausnummer, PLZ, Fachrichtung)
 VALUES (87543, 'Dr. Lukas Schmid', 'Neuer Wall', 20, 22083,'Orthopädie');
 
-INSERT INTO Facharzt (FArztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname, Fachrichtung)
+INSERT INTO Facharzt (Facharztnummer, Name, Strasse, Hausnummer, PLZ, Fachrichtung)
 VALUES (46758, 'Dr. Sophia Lang', 'Fuhlsbüttler Straße', 1, 22415,'Gastroenterologie');
 
-INSERT INTO Facharzt (FArztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname, Fachrichtung)
+INSERT INTO Facharzt (Facharztnummer, Name, Strasse, Hausnummer, PLZ, Fachrichtung)
 VALUES (20674, 'Dr. Felix Zimmermann', 'Osdorfer Landstraße', 25, 22179,'Neurologie');
 
-INSERT INTO Facharzt (FArztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname, Fachrichtung)
+INSERT INTO Facharzt (Facharztnummer, Name, Strasse, Hausnummer, PLZ, Fachrichtung)
 VALUES (34369, 'Dr. Emma Krüger', 'Billstedter Hauptstraße', 38, 22549,'Urologie');
 
-INSERT INTO Facharzt (FArztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname, Fachrichtung)
+INSERT INTO Facharzt (Facharztnummer, Name, Strasse, Hausnummer, PLZ, Fachrichtung)
 VALUES (32496, 'Dr. Leon Schneider', 'Große Elbstraße', 89, 22309,'Endokrinologie');
 
-INSERT INTO Facharzt (FArztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname, Fachrichtung)
+INSERT INTO Facharzt (Facharztnummer, Name, Strasse, Hausnummer, PLZ, Fachrichtung)
 VALUES (97825, 'Dr. Charlotte Fischer', 'Schwanenwik', 77, 22549,'Hämatologie');
 
-INSERT INTO Facharzt (FArztnummer, Name, Strasse, Hausnummer, PLZ, Praxisname, Fachrichtung)
+INSERT INTO Facharzt (Facharztnummer, Name, Strasse, Hausnummer, PLZ, Fachrichtung)
 VALUES (23423, 'Dr. Niklas Vogel', 'Reeperbahn', 8, 22393,'Ophthalmologie');
 
 -- Patient mit neuen Daten befüllen
@@ -120,37 +121,102 @@ VALUES (819200, 'Hermes Conrad', 'Hamburger Straße', 34, 21077, '06-02-2002', '
 INSERT INTO Patient (KVNummer, Name, Strasse, Hausnummer, PLZ, Geburtsdatum, Geschlecht, betreutVon)
 VALUES (163840, 'Ron Weasley', 'Horner Weg', 15, 21077, '11-09-2003', 'm', 56672);
 
+-- eRezept mit neuen Daten befüllen
+
+INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
+VALUES (3909, '17.09.2023', 32768, 100001);
+
+INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
+VALUES (3145, '09.07.2023', 65536, 100010);
+
+INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
+VALUES (3272, '15.09.2023', 45634, 128128);
+
+INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
+VALUES (3364, '24.08.2023', 76446, 256256);
+
+INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
+VALUES (3497, '10.03.2023', 54577, 512512);
+
+INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
+VALUES (3173, '04.10.2023', 98346, 102400);
+
+INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
+VALUES (3920, '27.03.2023', 23564, 204800);
+
+INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
+VALUES (3627, '07.09.2023', 54567, 409600);
+
+INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
+VALUES (3783, '04.01.2023', 34546, 819200);
+
+INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
+VALUES (3481, '11.02.2023', 56672, 163840);
+
 -- Apotheke mit neuen Daten befüllen
 
 INSERT INTO Apotheke (Apothekennummer, Name, Strasse, Hausnummer, PLZ, zugeordnetRezept)
-VALUES (34329, 'Vitalis Apotheke', 'Osdorfer Landstraße', 64, 22549, 'Ibuprofen', '18-09-2023', 3909);
+VALUES (34329, 'Vitalis Apotheke', 'Osdorfer Landstraße', 64, 22549, 3909);
 
 INSERT INTO Apotheke (Apothekennummer, Name, Strasse, Hausnummer, PLZ, zugeordnetRezept)
-VALUES (65464, 'MediCare Pharmacy', 'Fuhlsbüttler Straße', 76, 22041, 'Paracetamol', '10-07-2023', 3145);
+VALUES (65464, 'MediCare Pharmacy', 'Fuhlsbüttler Straße', 76, 22041, 3145);
 
 INSERT INTO Apotheke (Apothekennummer, Name, Strasse, Hausnummer, PLZ, zugeordnetRezept)
-VALUES (97897, 'GreenLeaf Apotheke', 'Saselbeker Stieg', 28, 20095, 'Metformin', '16-09-2023', 3272);
+VALUES (97897, 'GreenLeaf Apotheke', 'Saselbeker Stieg', 28, 20095, 3272);
 
 INSERT INTO Apotheke (Apothekennummer, Name, Strasse, Hausnummer, PLZ, zugeordnetRezept)
-VALUES (78782, 'CityCare Apotheke', 'Wandsbeker Chaussee', 52, 22111, 'Lisinopril', '25-08-2023', 3364);
+VALUES (78782, 'CityCare Apotheke', 'Wandsbeker Chaussee', 52, 22111, 3364);
 
 INSERT INTO Apotheke (Apothekennummer, Name, Strasse, Hausnummer, PLZ, zugeordnetRezept)
-VALUES (24257, 'HealthPlus Apotheke', 'Bramfelder Chaussee', 34, 22307, 'Atorvastatin', '11-03-2023', 3497);
+VALUES (24257, 'HealthPlus Apotheke', 'Bramfelder Chaussee', 34, 22307, 3497);
 
 INSERT INTO Apotheke (Apothekennummer, Name, Strasse, Hausnummer, PLZ, zugeordnetRezept)
-VALUES (43427, 'PharmaWorld', 'Steilshooper Allee', 88, 22111, 'Simvastatin', '05-10-2023', 3173);
+VALUES (43427, 'PharmaWorld', 'Steilshooper Allee', 88, 22111, 3173);
 
 INSERT INTO Apotheke (Apothekennummer, Name, Strasse, Hausnummer, PLZ, zugeordnetRezept)
-VALUES (34327, 'Natures Cure Apotheke', 'Hafenstraße', 31, 22111, 'Omeprazol', '28-03-2023', 3920);
+VALUES (34327, 'Natures Cure Apotheke', 'Hafenstraße', 31, 22111, 3920);
 
 INSERT INTO Apotheke (Apothekennummer, Name, Strasse, Hausnummer, PLZ, zugeordnetRezept)
-VALUES (77867, 'LifeLine Pharmacy', 'Bramfelder Chaussee', 33, 22083, 'Amlodipin', '08-09-2023', 3627);
+VALUES (77867, 'LifeLine Pharmacy', 'Bramfelder Chaussee', 33, 22083, 3627);
 
 INSERT INTO Apotheke (Apothekennummer, Name, Strasse, Hausnummer, PLZ, zugeordnetRezept)
-VALUES (66432, 'Sunshine Apotheke', 'Billstedter Hauptstraße', 87, 22393, 'Amoxicillin', '05-01-2023', 3783);
+VALUES (66432, 'Sunshine Apotheke', 'Billstedter Hauptstraße', 87, 22393, 3783);
 
 INSERT INTO Apotheke (Apothekennummer, Name, Strasse, Hausnummer, PLZ, zugeordnetRezept)
-VALUES (23478, 'Wellness Pharma', 'Große Elbstraße', 13, 22415, 'Cetirizin', '12-02-2023', 3481);
+VALUES (23478, 'Wellness Pharma', 'Große Elbstraße', 13, 22415, 3481);
+
+
+-- Labor mit Daten befüllen
+
+INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
+VALUES (64359, 'BioAnalytik Lab', 'Schwanenwik', 9, '22041');
+
+INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
+VALUES (11249, 'Molecular Diagnostics', 'Neuer Wall', 14, '20095');
+
+INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
+VALUES (97862, 'GenTech Research', 'Billstedter Hauptstraße', 53, '22309');
+
+INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
+VALUES (87784, 'PathoSolutions', 'Eppendorfer Landstraße', 31, '22309');
+
+INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
+VALUES (43765, 'Immunology Experts', 'Reeperbahn', 57, '22307');
+
+INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
+VALUES (55797, 'Cell Dynamics', 'Langenhorner Chaussee', 37, '20095');
+
+INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
+VALUES (22547, 'EcoHealth Labs', 'Wandsbeker Chaussee', 27, '22549');
+
+INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
+VALUES (87653, 'Quantum Bio', 'Eppendorfer Landstraße', 91, '20095');
+
+INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
+VALUES (34854, 'Vitalis Diagnostics', 'Steilshooper Allee', 100, '22393');
+
+INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
+VALUES (34874, 'NeuroLab Inc.', 'Große Freiheit', 19, '22041');
 
 -- Probe mit neuen Daten befüllen
 
@@ -216,101 +282,70 @@ VALUES (5478967, 'Chronische Bronchitis', '04.01.2023', 819200, 34546, NULL);
 INSERT INTO Digitale_Patientenakte (Aktennummer, Befund, Datum, gehoertZu, eingetragenVonHausarzt, eingetragenVonFacharzt)
 VALUES (4234378, 'Osteoporose im Anfangsstadium', '11.02.2023', 163840, 56672, NULL);
 
--- eRezept mit neuen Daten befüllen
-
-INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
-VALUES (3909, '17.09.2023', 32768, 100001);
-
-INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
-VALUES (3145, '09.07.2023', 65536, 100010);
-
-INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
-VALUES (3272, '15.09.2023', 45634, 128128);
-
-INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
-VALUES (3364, '24.08.2023', 76446, 256256);
-
-INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
-VALUES (3497, '10.03.2023', 54577, 512512);
-
-INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
-VALUES (3173, '04.10.2023', 98346, 102400);
-
-INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
-VALUES (3920, '27.03.2023', 23564, 204800);
-
-INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
-VALUES (3627, '07.09.2023', 54567, 409600);
-
-INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
-VALUES (3783, '04.01.2023', 34546, 819200);
-
-INSERT INTO eRezept (Rezeptnummer, Datum, ausgestelltVon, ausgestelltAn)
-VALUES (3481, '11.02.2023', 56672, 163840);
 
 -- Termin mit neuen Daten befüllen
 
-INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt, vergibtTerminFacharzt)
-VALUES (4521, '17.09.2023', 32768, 100001, NULL);
+INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt)
+VALUES (4521, '17.09.2023', 32768, 100001);
 
-INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt, vergibtTerminFacharzt)
-VALUES (4870, '09.07.2023', 65536, 100010, NULL);
+INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt)
+VALUES (4870, '09.07.2023', 65536, 100010);
 
-INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt, vergibtTerminFacharzt)
-VALUES (4200, '15.09.2023', 45634, 128128, NULL);
+INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt)
+VALUES (4200, '15.09.2023', 45634, 128128);
 
-INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt, vergibtTerminFacharzt)
-VALUES (4133, '24.08.2023', 76446, 256256, NULL);
+INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt)
+VALUES (4133, '24.08.2023', 76446, 256256);
 
-INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt, vergibtTerminFacharzt)
-VALUES (4347, '10.03.2023', 54577, 512512, NULL);
+INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt)
+VALUES (4347, '10.03.2023', 54577, 512512);
 
-INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt, vergibtTerminFacharzt)
-VALUES (4036, '04.10.2023', 98346, 102400, NULL);
+INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt)
+VALUES (4036, '04.10.2023', 98346, 102400);
 
-INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt, vergibtTerminFacharzt)
-VALUES (4345, '27.03.2023', 23564, 204800, NULL);
+INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt)
+VALUES (4345, '27.03.2023', 23564, 204800);
 
-INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt, vergibtTerminFacharzt)
-VALUES (4591, '07.09.2023', 54567, 409600, NULL);
+INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt)
+VALUES (4591, '07.09.2023', 54567, 409600);
 
-INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt, vergibtTerminFacharzt)
-VALUES (4156, '04.01.2023', 34546, 819200, NULL);
+INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt)
+VALUES (4156, '04.01.2023', 34546, 819200);
 
-INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt, vergibtTerminFacharzt)
-VALUES (4791, '11.02.2023', 56672, 163840, NULL);
+INSERT INTO Termin (Terminnummer, Datum, bekommtTermin, vergibtTerminHausarzt)
+VALUES (4791, '11.02.2023', 56672, 163840);
 
 -- Überweisung mit neuen Daten befüllen
 
 INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, erhaltenVon, ueberwiesenVon, ueberwiesenAn)
-VALUES ('Herzprobleme', 100001, 32768, 34524);
+VALUES (654,'Herzprobleme', 100001, 32768, 34524);
 
 INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, erhaltenVon, ueberwiesenVon, ueberwiesenAn)
-VALUES (1000,'Muttermalüberwachung', 100010, 65536, 67865);
+VALUES (453,'Muttermalüberwachung', 100010, 65536, 67865);
 
 INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, erhaltenVon, ueberwiesenVon, ueberwiesenAn)
-VALUES (1000, 'Entwicklungsproblem', 128128, 45634, 45467);
+VALUES (347, 'Entwicklungsproblem', 128128, 45634, 45467);
 
 INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, erhaltenVon, ueberwiesenVon, ueberwiesenAn)
-VALUES (1000,'Gelenkschmerzen', 256256, 76446, 87543);
+VALUES (899,'Gelenkschmerzen', 256256, 76446, 87543);
 
 INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, erhaltenVon, ueberwiesenVon, ueberwiesenAn)
-VALUES (1000,'Verdauungsprobleme', 512512, 54577, 46758);
+VALUES (254,'Verdauungsprobleme', 512512, 54577, 46758);
 
 INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, erhaltenVon, ueberwiesenVon, ueberwiesenAn)
-VALUES (1000,'Kopfschmerzen', 102400, 98346, 20674);
+VALUES (665,'Kopfschmerzen', 102400, 98346, 20674);
 
 INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, erhaltenVon, ueberwiesenVon, ueberwiesenAn)
-VALUES (1000,'Harnwegsinfektion', 204800, 23564, 34369);
+VALUES (443,'Harnwegsinfektion', 204800, 23564, 34369);
 
 INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, erhaltenVon, ueberwiesenVon, ueberwiesenAn)
-VALUES (1000,'Hormonstörung', 409600, 54567, 32496);
+VALUES (123,'Hormonstörung', 409600, 54567, 32496);
 
 INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, erhaltenVon, ueberwiesenVon, ueberwiesenAn)
-VALUES (1000,'Anämie', 819200, 34546, 97825);
+VALUES (897,'Anämie', 819200, 34546, 97825);
 
 INSERT INTO Ueberweisung (Ueberweisungsnummer, Grund, erhaltenVon, ueberwiesenVon, ueberwiesenAn)
-VALUES (1000,'Sehstörung', 819200, 34546, 23423);
+VALUES (147,'Sehstörung', 819200, 34546, 23423);
 
 -- informierenFacharzt mit neuen Daten befüllen
 
@@ -343,38 +378,6 @@ VALUES ('03.01.2023', 34546, 97825);
 
 INSERT INTO informierenFacharzt (Datum, Arztnummer, Facharztnummer)
 VALUES ('10.02.2023', 56672, 23423);
-
--- Labor mit Daten befüllen
-
-INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
-VALUES (64359, 'BioAnalytik Lab', 'Schwanenwik', 9, '22041');
-
-INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
-VALUES (11249, 'Molecular Diagnostics', 'Neuer Wall', 14, '20095');
-
-INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
-VALUES (97862, 'GenTech Research', 'Billstedter Hauptstraße', 53, '22309');
-
-INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
-VALUES (87784, 'PathoSolutions', 'Eppendorfer Landstraße', 31, '22309');
-
-INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
-VALUES (43765, 'Immunology Experts', 'Reeperbahn', 57, '22307');
-
-INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
-VALUES (55797, 'Cell Dynamics', 'Langenhorner Chaussee', 37, '20095');
-
-INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
-VALUES (22547, 'EcoHealth Labs', 'Wandsbeker Chaussee', 27, '22549');
-
-INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
-VALUES (87653, 'Quantum Bio', 'Eppendorfer Landstraße', 91, '20095');
-
-INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
-VALUES (34854, 'Vitalis Diagnostics', 'Steilshooper Allee', 100, '22393');
-
-INSERT INTO Labor (Labornummer, Name, Strasse, Hausnummer, PLZ)
-VALUES (34874, 'NeuroLab Inc.', 'Große Freiheit', 19, '22041');
 
 -- Messwerte mit Daten befüllen
 

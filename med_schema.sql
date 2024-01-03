@@ -229,8 +229,15 @@ ALTER TABLE termin
 ALTER TABLE ueberweisung
     ADD (gueltigkeitsdatum DATE);
 
+--Vorhandene Rollen löschen
+DROP ROLE myPatient;
+DROP ROLE hausarzt;
+DROP ROLE fachlabor;
+DROP ROLE facharzt;
+DROP ROLE apotheke;
+
 --Rollen erstellen
-CREATE ROLE patient;
+CREATE ROLE myPatient;
 CREATE ROLE hausarzt;
 CREATE ROLE fachlabor;
 CREATE ROLE facharzt;
