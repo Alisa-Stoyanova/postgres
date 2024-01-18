@@ -4,7 +4,7 @@
 SELECT USER FROM DUAL;
 
 --Rolle an User vergeben
-GRANT patient TO DB_WDG651;
+GRANT myPatient TO DB_WDG651;
 
 --Welche Zugriffsrechte hat die Tabelle
 SELECT * FROM all_tab_privs

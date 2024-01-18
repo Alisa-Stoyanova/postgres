@@ -14,7 +14,7 @@ DROP TABLE Facharzt CASCADE CONSTRAINTS;
 DROP TABLE Patient CASCADE CONSTRAINTS;
 DROP TABLE Apotheke CASCADE CONSTRAINTS;
 DROP TABLE Probe CASCADE CONSTRAINTS;
-DROP TABLE DigitalePatientenakte CASCADE CONSTRAINTS;
+DROP TABLE akte CASCADE CONSTRAINTS;
 DROP TABLE LaborMesswerte CASCADE CONSTRAINTS; --DO NOT DELETE, SAFE TO IGNORE
 DROP TABLE messwert CASCADE CONSTRAINTS;
 DROP TABLE eRezept CASCADE CONSTRAINTS;
@@ -89,7 +89,7 @@ CREATE TABLE Probe
 
 -- Neues Schema für Digitale Patientenakte anlegen
 
-CREATE TABLE DigitalePatientenakte
+CREATE TABLE akte
 (
     Aktennummer    INTEGER PRIMARY KEY,
     Befund         VARCHAR(255) NOT NULL,
@@ -218,54 +218,16 @@ ALTER TABLE patient
     ADD (CONSTRAINT validSex
         CHECK (geschlecht = 'm' OR geschlecht = 'f' OR geschlecht = 'd'));
 
-ALTER TABLE patient
+/*ALTER TABLE patient
     ADD (CONSTRAINT validBirthdate
         CHECK (geburtsdatum < SYSDATE - 18 * 365)); --die Ärzte behandeln nur volljährige Patienten
 
 ALTER TABLE termin
     ADD (CONSTRAINT validDate
-        CHECK (datum >= SYSDATE AND datum <= SYSDATE + 365));
+        CHECK (datum >= SYSDATE AND datum <= SYSDATE + 365));*/
 
 ALTER TABLE ueberweisung
     ADD (gueltigkeitsdatum DATE);
-
---Vorhandene Rollen löschen
-DROP ROLE myPatient;
-DROP ROLE hausarzt;
-DROP ROLE fachlabor;
-DROP ROLE facharzt;
-DROP ROLE apotheke;
-
---Rollen erstellen
-CREATE ROLE myPatient;
-CREATE ROLE hausarzt;
-CREATE ROLE fachlabor;
-CREATE ROLE facharzt;
-CREATE ROLE apotheke;
-
---Zugriffsrechte für die Rollen definieren
---Patient
-GRANT SELECT ON DB_WUY315.digitalePatientenakte TO patient; --Patienten können lesend auf ihre Patientenakte zugreifen, aber nicht schreiben
-GRANT SELECT ON DB_WUY315.hausarzt TO patient; --Patient wählt einen Hausarzt
-
---Hausarzt
-GRANT SELECT, INSERT, UPDATE ON DB_WUY315.patient TO hausarzt; --Hausärzte können neue Patienten aufnehmen
-GRANT SELECT, INSERT, UPDATE ON DB_WUY315.digitalePatientenakte TO hausarzt WITH GRANT OPTION; --Hausärzte können Patientenakte für Patienten anlegen und bearbeiten, aber nicht löschen
-GRANT SELECT, INSERT, UPDATE ON DB_WUY315.termin TO hausarzt; --Hausärzte können mit Patienten einen Termin vereinbaren
-GRANT SELECT, INSERT, UPDATE ON DB_WUY315.probe TO hausarzt; --Hausärzte können Proben in ein Fachlabor schicken
-GRANT SELECT ON DB_WUY315.messwert TO hausarzt; --Hausärzte können die Probenwerte zurückerhalten und in die Patientenakte eintragen
-GRANT SELECT, INSERT, UPDATE ON DB_WUY315.erezept TO hausarzt WITH GRANT OPTION; --Hausärzte können eRezepte ausstellen und an die Patienten weitergeben
-GRANT SELECT, INSERT, UPDATE ON DB_WUY315.ueberweisung TO hausarzt; --Hausärzte können an Fachärzte überweisen
-
---Fachlabor
---Fachlabore erhalten Proben, die anonymisiert sind: zu sehen sind nur Probenummer
-CREATE VIEW laborViewProbe AS SELECT probeNummer, probeTyp, entnommenVon FROM probe;
-CREATE VIEW laborViewBlutprobe AS SELECT probeNr, ap, aAmylase, bilirubin, cholesterin, crp, eisen, elektrolyte,
-                                         ferritin, gammaGt, got, gesamteiweiss, harnsaeure, harnstoff, kreatinin, ck,
-                                         ldh, lipase, neutralfette, schilddruesenwerte FROM blutProbe;
-GRANT SELECT ON DB_WUY315.laborViewProbe TO fachlabor;
-GRANT SELECT, INSERT, UPDATE ON DB_WUY315.laborViewBlutProbe TO fachlabor;
-GRANT SELECT, INSERT, UPDATE ON DB_WUY315.messwert TO fachlabor; --Fachlabore erzeugen die Untersuchungsergebnisse
 
 --Gültigkeitsdatum von Überweisung automatisch erstellen
 CREATE OR REPLACE TRIGGER expiryDate
@@ -277,9 +239,6 @@ CREATE OR REPLACE TRIGGER expiryDate
 
 --TODO
 --Tabellen Messwert und Probe sind unnötig, in der 5.Aufgabe nur Blutprobe, Messwerte können Labore in Attribute von Probe schreiben
-
---Facharzt: Zugriffsrechte definieren
---Apotheke: Zugriffsrechte definieren
 
 -- Hausärzte können den Fachärzten den Zugriff auf ausgewählte Patientenakten gewähren --> create View, aber wie?
 -- temporäre Zugriff auf die Digitale Patientenakte eingerichtet --> WIE ?
